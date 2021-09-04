@@ -1,9 +1,7 @@
 package com.ivoronline.springboot_db_query_native_create_mapping_column.controllers;
 
-import com.ivoronline.springboot_db_query_native_create_mapping_column.entities.Person;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;

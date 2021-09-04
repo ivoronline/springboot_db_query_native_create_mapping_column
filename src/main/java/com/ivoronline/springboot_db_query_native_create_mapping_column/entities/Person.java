@@ -10,16 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.SqlResultSetMapping;
 
 @SqlResultSetMapping(
-  name     = "PersonMapping",
-  entities = @EntityResult(
-    entityClass = Person.class,
-    fields      = {
-        @FieldResult(name = "id"  , column = "id"  ), //All Columns must be mapped
-        @FieldResult(name = "name", column = "name"),
-        @FieldResult(name = "age" , column = "age" )
-    }
-  ),
-  columns = @ColumnResult(name = "greet")             //"John is 20"
+  name    = "PersonMapping",
+  columns = {
+    @ColumnResult(name = "name"),   //"John"
+    @ColumnResult(name = "greet")   //"John is 20"
+  }
 )
 @Entity
 public class Person {
